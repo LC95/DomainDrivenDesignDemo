@@ -2,9 +2,9 @@
 
 ## SapiensWorks.com作品, LC95自译
 
-[DDD Decoded - The Aggregate and Aggregate Root Explained(Part 1)](http://blog.sapiensworks.com/post/2016/07/14/DDD-Aggregate-Decoded-1)
+[DDD Decoded - The Aggregate and Aggregate Root Explained(Part 1)](https://blog.sapiensworks.com/post/2016/07/14/DDD-Aggregate-Decoded-1)
 [DDD Decoded - The Aggregate and Aggregate Root Explained(Part 2)](https://blog.sapiensworks.com/post/2016/07/14/DDD-Aggregate-Decoded-2)
-[DDD Decoded - The Aggregate and Aggregate Root Explained(Part 3)](http://blog.sapiensworks.com/post/2016/07/14/DDD-Aggregate-Decoded-3)
+[DDD Decoded - The Aggregate and Aggregate Root Explained(Part 3)](https://blog.sapiensworks.com/post/2016/07/14/DDD-Aggregate-Decoded-3)
 
 
 ## Part1 理论知识
