@@ -12,6 +12,7 @@
   * [领域驱动设计DDD部分核心概念的个人理解](https://www.cnblogs.com/netfocus/p/4492486.html)
   * [谈谈我对DDD领域驱动设计的理解](https://www.cnblogs.com/netfocus/p/5548025.html)
   * [领域驱动设计常见问题](https://www.cnblogs.com/netfocus/p/3798770.html)
+  * [关于对象之间通信的一点思考](https://www.cnblogs.com/netfocus/archive/2012/02/12/2347895.html)
   * [整理关于牛人们对图书管理系统领域建模的精彩讨论，以此希望大家学习下别人是如何思考的](https://www.cnblogs.com/netfocus/archive/2011/06/21/2086448.html)
 * **DDD解码系列**
   * 源自[Sapiensworks.com](http://blog.sapiensworks.com/tags.html)
