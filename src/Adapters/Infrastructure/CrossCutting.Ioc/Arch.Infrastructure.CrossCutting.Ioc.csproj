@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="4.9.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Repositories.EF\Arch.Repository.EntitiyFramework\Arch.Repository.EntityFramework.csproj" />
+    <ProjectReference Include="..\CrossCutting.Bus\Arch.Infrastructure.CrossCutting.Bus.csproj" />
+    <ProjectReference Include="..\CrossCutting.Identity\Arch.Infrastructure.CrossCutting.Identity.csproj" />
+    <ProjectReference Include="..\Infrastructure\Arch.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,14 +1,16 @@
-﻿namespace Arch.Domain.Entities
+﻿using Arch.Domain.Core.Models;
+
+namespace Arch.Domain.Entities
 {
-    public class User
+    public class User : Entity
     {
-        public User(string id, string name)
+        public User(string userId, string name)
         {
-            Id = id;
+            UserId = userId;
             Name = name;
         }
 
-        public string Id { get; set; }
+        public string UserId { get; set; }
 
         public string Name { get; set; }
     }

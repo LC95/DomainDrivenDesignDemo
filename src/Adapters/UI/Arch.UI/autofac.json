@@ -1,0 +1,26 @@
+{
+  "defaultAssembly": "Arch.Infrastructure.CrossCutting.Ioc",
+  "modules": [
+    {
+      "type": "Arch.Infrastructure.CrossCutting.Ioc.Modules.InfrastructureModule",
+      "properties": {
+      }
+    },
+    {
+      "type": "Arch.Infrastructure.CrossCutting.Ioc.Modules.BusModule",
+      "properties": {
+      }
+    },
+    {
+      "type": "Arch.Infrastructure.CrossCutting.Ioc.Modules.IdentityModule",
+      "properties": {
+      }
+    },
+    {
+      "type": "Arch.Infrastructure.CrossCutting.Ioc.Modules.EFRepositoryModule",
+      "properties": {
+        "ConnectionString": "Server=.;Database=AcerolaDb;Integrated Security=true;"
+      }
+    }
+  ]
+}

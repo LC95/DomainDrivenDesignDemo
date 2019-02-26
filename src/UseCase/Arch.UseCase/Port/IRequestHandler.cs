@@ -1,4 +1,4 @@
-﻿namespace Arch.UseCase.UseCases.ContactAgent
+﻿namespace Arch.UseCase.Port
 {
     public interface IRequestHandler<TRequest, TResponse>
     {

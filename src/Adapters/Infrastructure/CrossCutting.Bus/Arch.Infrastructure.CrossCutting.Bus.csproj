@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\UseCase\Arch.UseCase\Arch.UseCase.csproj" />
+    <ProjectReference Include="..\..\..\Domain\Domain.Core\Arch.Domain.Core\Arch.Domain.Core.csproj" />
   </ItemGroup>
 
 </Project>

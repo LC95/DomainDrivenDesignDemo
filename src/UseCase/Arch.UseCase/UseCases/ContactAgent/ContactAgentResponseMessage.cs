@@ -4,12 +4,12 @@ namespace Arch.UseCase.UseCases.ContactAgent
 {
     public class ContactAgentResponseMessage
     {
-        public ValidationResult Result { get; }
-        public string HouseId { get; }
+        public ValidationResult ValidationResult { get; }
+        public long? HouseId { get; }
 
-        public ContactAgentResponseMessage(ValidationResult result, string houseId = null)
+        public ContactAgentResponseMessage(ValidationResult validationResult, long? houseId = null)
         {
-            Result = result;
+            ValidationResult = validationResult;
             HouseId = houseId;
         }
     }

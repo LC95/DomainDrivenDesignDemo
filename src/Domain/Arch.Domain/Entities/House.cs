@@ -1,20 +1,22 @@
-﻿using System.Collections.Generic;
-using Arch.Domain.ValueObjects;
+﻿using Arch.Domain.ValueObjects;
+using System.Collections.Generic;
+using Arch.Domain.Core.Models;
 
-namespace Arch.Domain.Entities
-{
-    public class House
-    {
-        public House(List<Interest> interests)
+namespace Arch.Domain.Entities {
+    public class House :Entity {
+        public long? HouseId { get; set; }
+        public string Address { get;set;}
+
+        public IList<Interest> Leads { get;}
+
+        public House()
         {
-            Interests = interests;
+            Leads = new List<Interest>();
         }
-
-        public List<Interest> Interests { get;}
 
         public void RegisterInterest(Interest interest)
         {
-            Interests.Add(interest);
+            Leads.Add(interest);
         }
     }
 }
