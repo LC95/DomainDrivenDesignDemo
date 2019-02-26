@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Arch.Domain
+﻿namespace Arch.Domain.Entities
 {
     public class User
     {

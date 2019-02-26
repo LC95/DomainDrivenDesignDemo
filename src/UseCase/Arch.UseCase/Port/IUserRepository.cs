@@ -1,4 +1,5 @@
 ﻿using Arch.Domain;
+using Arch.Domain.Entities;
 
 namespace Arch.UseCase.Port
 {
