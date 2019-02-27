@@ -2,6 +2,16 @@
   "defaultAssembly": "Arch.Infrastructure.CrossCutting.Ioc",
   "modules": [
     {
+      "type": "Arch.Infrastructure.CrossCutting.Ioc.Modules.DomainCoreModule",
+      "properties": {
+      }
+    },
+    {
+      "type": "Arch.Infrastructure.CrossCutting.Ioc.Modules.DomainModule",
+      "properties": {
+      }
+    },
+    {
       "type": "Arch.Infrastructure.CrossCutting.Ioc.Modules.InfrastructureModule",
       "properties": {
       }

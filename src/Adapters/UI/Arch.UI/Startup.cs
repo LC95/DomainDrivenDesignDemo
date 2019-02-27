@@ -1,17 +1,26 @@
-﻿using Autofac;
+﻿using Arch.Domain.Commands;
+using Autofac;
 using Autofac.Configuration;
+using Autofac.Extensions.DependencyInjection;
+using MediatR.Extensions.Autofac.DependencyInjection;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using System.IO;
+
 [assembly: ApiController]
 namespace Arch.Api {
     public class Startup {
-        public Startup(IConfiguration configuration)
+        public Startup(IHostingEnvironment env, IConfiguration configuration)
         {
-            Configuration = configuration;
+            var builder = new ConfigurationBuilder()
+                 .SetBasePath(env.ContentRootPath)
+                 .AddJsonFile("autofac.json", true, true)
+                 .AddJsonFile("appsettings.json", true, true)
+                 .AddJsonFile($"appsettings.{env.EnvironmentName}.json", true)
+                 .AddEnvironmentVariables();
+            Configuration = builder.Build();
         }
 
         public IConfiguration Configuration { get; }
@@ -26,16 +35,10 @@ namespace Arch.Api {
                     .AllowAnyHeader()
                     .AllowCredentials());
             });
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddMvc();
             services.AddSwaggerGen(options =>
             {
                 options.DescribeAllEnumsAsStrings();
-
-                options.IncludeXmlComments(
-                    Path.ChangeExtension(
-                        typeof(Startup).Assembly.Location,
-                        "xml"));
-
                 options.SwaggerDoc("v1", new Swashbuckle.AspNetCore.Swagger.Info
                 {
                     Title = Configuration["App:Title"],

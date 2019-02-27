@@ -12,13 +12,7 @@ namespace Arch.Api {
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>()
-                .ConfigureAppConfiguration((builderContext, config) =>
-                {
-                    IHostingEnvironment env = builderContext.HostingEnvironment;
-                    config.AddJsonFile("autofac.json");
-                    config.AddEnvironmentVariables();
-                })
-                .ConfigureServices(services => services.AddAutofac());
+                .ConfigureServices(services => services.AddAutofac())
+                .UseStartup<Startup>();
     }
 }

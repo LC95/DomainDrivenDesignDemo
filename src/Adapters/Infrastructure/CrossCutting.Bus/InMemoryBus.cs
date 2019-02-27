@@ -7,12 +7,10 @@ using MediatR;
 namespace Arch.Infrastructure.CrossCutting.Bus {
     public sealed class InMemoryBus : IMediatorHandler{
         private readonly IMediator _mediator;
-        private readonly IEventStore _eventStore;
 
-        public InMemoryBus(IMediator mediator, IEventStore eventStore)
+        public InMemoryBus(IMediator mediator)
         {
             _mediator = mediator;
-            _eventStore = eventStore;
         }
 
         public Task SendCommand<T>(T command) where T : AbstractCommand
@@ -22,9 +20,6 @@ namespace Arch.Infrastructure.CrossCutting.Bus {
 
         public Task RaiseEvent<T>(T @event) where T : AbstractEvent
         {
-            if (!@event.MessageType.Equals("DomainNotification"))
-                _eventStore?.Save(@event);
-
             return _mediator.Publish(@event);
         }
     }

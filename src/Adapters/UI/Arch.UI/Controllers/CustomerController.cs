@@ -14,14 +14,9 @@ namespace Arch.Api.Controllers {
     public class CustomerController : ApiController{
         private readonly ICustomerAppService _customerAppService;
 
-        public CustomerController(INotificationHandler<DomainNotification> notificationHandler, IMediatorHandler mediator, ICustomerAppService customerAppService) : base(notificationHandler, mediator)
-        {
-            _customerAppService = customerAppService;
-        }
-        public CustomerController(
-           ICustomerAppService customerAppService,
-           INotificationHandler<DomainNotification> notifications,
-           IMediatorHandler mediator) : base(notifications, mediator)
+        public CustomerController(INotificationHandler<DomainNotification> notificationHandler, 
+            IMediatorHandler mediator, 
+            ICustomerAppService customerAppService) : base(notificationHandler, mediator)
         {
             _customerAppService = customerAppService;
         }
