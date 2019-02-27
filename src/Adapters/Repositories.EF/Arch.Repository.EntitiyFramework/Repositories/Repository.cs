@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+using Arch.Data.EntityFramework.Context;
 using Arch.Domain.Core.Models;
-using Arch.Repository.EntityFramework.Context;
 using Microsoft.EntityFrameworkCore;
 
-namespace Arch.Repository.EntityFramework.Repositories {
+namespace Arch.Data.EntityFramework.Repositories {
     public class Repository<Tkey,TEntity> : IRepository<Tkey, TEntity> where TEntity : Entity
     {
         protected readonly ArchContext Db;

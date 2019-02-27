@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Arch.Domain.Entities;
+﻿using Arch.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Arch.Repository.EntityFramework.Mappings {
+namespace Arch.Data.EntityFramework.Mappings {
     public class CustomerMap : IEntityTypeConfiguration<Customer> {
         public void Configure(EntityTypeBuilder<Customer> builder)
         {

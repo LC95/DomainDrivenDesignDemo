@@ -1,5 +1,5 @@
-﻿using Arch.Repository.EntityFramework.Context;
-using Arch.Repository.EntityFramework.UoW;
+﻿using Arch.Data.EntityFramework.Context;
+using Arch.Data.EntityFramework.UoW;
 using Autofac;
 using Microsoft.EntityFrameworkCore;
 
@@ -14,9 +14,6 @@ namespace Arch.Infrastructure.CrossCutting.Ioc.Modules {
             optionsBuilder.EnableSensitiveDataLogging(true);
 
             builder.RegisterType<ArchContext>()
-              .WithParameter(new TypedParameter(typeof(DbContextOptions), optionsBuilder.Options))
-              .InstancePerLifetimeScope();
-            builder.RegisterType<EventStoreSqlContext>()
               .WithParameter(new TypedParameter(typeof(DbContextOptions), optionsBuilder.Options))
               .InstancePerLifetimeScope();
 

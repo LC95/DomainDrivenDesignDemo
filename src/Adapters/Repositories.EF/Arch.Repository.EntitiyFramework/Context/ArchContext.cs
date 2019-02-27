@@ -1,10 +1,8 @@
-﻿using Arch.Domain.Entities;
-using Arch.Repository.EntityFramework.Mappings;
-using Microsoft.AspNetCore.Hosting;
+﻿using Arch.Data.EntityFramework.Mappings;
+using Arch.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 
-namespace Arch.Repository.EntityFramework.Context {
+namespace Arch.Data.EntityFramework.Context {
     public class ArchContext : DbContext {
         public ArchContext(DbContextOptions options) : base(options)
         {

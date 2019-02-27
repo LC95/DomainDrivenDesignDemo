@@ -17,6 +17,11 @@
       }
     },
     {
+      "type": "Arch.Infrastructure.CrossCutting.Ioc.Modules.UseCaseModule",
+      "properties": {
+      }
+    },
+    {
       "type": "Arch.Infrastructure.CrossCutting.Ioc.Modules.EFRepositoryModule",
       "properties": {
         "ConnectionString": "Server=.;Database=AcerolaDb;Integrated Security=true;"

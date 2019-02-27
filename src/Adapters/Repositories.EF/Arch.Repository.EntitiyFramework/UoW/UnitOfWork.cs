@@ -1,7 +1,7 @@
-﻿using Arch.Domain.Core.Models;
-using Arch.Repository.EntityFramework.Context;
+﻿using Arch.Data.EntityFramework.Context;
+using Arch.Domain.Core.Models;
 
-namespace Arch.Repository.EntityFramework.UoW {
+namespace Arch.Data.EntityFramework.UoW {
     public class UnitOfWork : IUnitOfWork {
         private readonly ArchContext _context;
 

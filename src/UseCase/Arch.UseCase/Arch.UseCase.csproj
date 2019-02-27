@@ -12,8 +12,4 @@
     <ProjectReference Include="..\..\Domain\Arch.Domain\Arch.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="EventSourcedNormalizers\" />
-  </ItemGroup>
-
 </Project>
